@@ -9,3 +9,6 @@ Reproduction
 3. Touch down on left side of button (within 40pts)
 4. Observe lack of highlight state
 5. Touch up and observer another push
+
+
+[Video demonstrating issue](highlightissue.mov)
