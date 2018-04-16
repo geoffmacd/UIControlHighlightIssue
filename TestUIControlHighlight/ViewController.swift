@@ -1,6 +1,15 @@
 
 import UIKit
 
+class TestingButton: UIButton {
+    
+    override var isHighlighted: Bool {
+        didSet {
+            print("isHighlighted changed \(isHighlighted)")
+        }
+    }
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -9,7 +18,7 @@ class ViewController: UIViewController {
         title = "Plus-sized device UIControl issue"
         view.backgroundColor = .white
         
-        let button = UIButton(type: .system)
+        let button = TestingButton(type: .system)
         button.setTitle("Push ViewController", for: .normal)
         
         // when highlighting this button (or any UIControl)
@@ -27,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     @objc func tapped() {
+        print("tapped")
         navigationController?.pushViewController(ViewController(), animated: true)
     }
 }
